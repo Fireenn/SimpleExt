@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Simple Extension",
+    "version": "1.0.0",
+    "content_scripts": [
+        {
+            "matches": ["https://web.simple-mmo.com/*"],
+            "js": ["jquery-3.6.1.min.js", "common.js"]
+        },
+        {
+            "matches": ["https://web.simple-mmo.com/travel/*"],
+            "js": ["jquery-3.6.1.min.js", "common.js", "travel.js"]
+        },
+        {
+            "matches": ["https://web.simple-mmo.com/*/attack/*"],
+            "js": ["jquery-3.6.1.min.js", "common.js", "attack.js"]
+        },
+        {
+            "matches": ["https://web.simple-mmo.com/*/gather/*"],
+            "js": ["jquery-3.6.1.min.js", "common.js", "gather.js"]
+        },
+        {
+            "matches": ["https://web.simple-mmo.com/inventory/items*"],
+            "js": ["jquery-3.6.1.min.js", "common.js", "inventory.js"]
+        },
+        {
+            "matches": ["https://web.simple-mmo.com/user/character"],
+            "js": ["jquery-3.6.1.min.js", "common.js", "character_data.js"]
+        }
+    ]
+}
