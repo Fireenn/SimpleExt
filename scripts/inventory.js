@@ -21,7 +21,7 @@ var weapon_types = [
     "Gauntlet",
     "Boots",
     "Pet",
-    "Shields",
+    "Shield",
     "Special"
 ]
 
@@ -137,10 +137,10 @@ function analyze_inventory_screen() {
         } else {
             timeout = 0;
         }
-
-
     }
-    else if(invt_mgmt === "collect_items") return;
+    else if(invt_mgmt === "collect_items") {
+        collect_items(table[table_idx]);
+    }
     else if(invt_mgmt === "sell_items") return;
     else return;
 
@@ -158,12 +158,20 @@ function analyze_inventory_screen() {
             analyze_inventory_screen()
         }, timeout);
     } else {
-        console.log("At end of page");
+        $("button:contains('Next')").click();
+        setTimeout(function () {
+            let clicked_button = sessionStorage.getItem('invt_mgmt')
+            window[clicked_button + "_btn"].click();
+        }, 500 + randomInterval());
     }
 
 
 }
 
+
+function collect_items(element) {
+    $(element).find('[class*="-item"]')
+}
 
 function equip_item(element) {
     // let is_better = false;

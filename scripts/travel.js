@@ -2,14 +2,15 @@ var auto_travel_btn;
 
 $(window).on("load", function () {
 
-    if (sessionStorage.getItem("user_id") === null & !(window.location.pathname.includes("character"))) {
-        window.location = "/character";
-        // console.log(window.location.pathname);
-    } else {
-        load_auto_travel_button();
-    }
+    // if (sessionStorage.getItem("user_id") === null & !(window.location.pathname.includes("character"))) {
+    //     window.location = "/character";
+    //     // console.log(window.location.pathname);
+    // } else {
+    //     load_auto_travel_button();
+    // }
     // check_coordinates();
     // check_party();
+    load_auto_travel_button();
 })
 
 

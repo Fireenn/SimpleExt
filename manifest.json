@@ -5,27 +5,27 @@
     "content_scripts": [
         {
             "matches": ["https://web.simple-mmo.com/*"],
-            "js": ["jquery-3.6.1.min.js", "common.js"]
+            "js": ["./scripts/jquery-3.6.1.min.js", "./scripts/common.js"]
         },
         {
             "matches": ["https://web.simple-mmo.com/travel/*"],
-            "js": ["jquery-3.6.1.min.js", "common.js", "travel.js"]
+            "js": ["./scripts/jquery-3.6.1.min.js", "./scripts/common.js", "./scripts/travel.js"]
         },
         {
             "matches": ["https://web.simple-mmo.com/*/attack/*"],
-            "js": ["jquery-3.6.1.min.js", "common.js", "attack.js"]
+            "js": ["./scripts/jquery-3.6.1.min.js", "./scripts/common.js", "./scripts/attack.js"]
         },
         {
             "matches": ["https://web.simple-mmo.com/*/gather/*"],
-            "js": ["jquery-3.6.1.min.js", "common.js", "gather.js"]
+            "js": ["./scripts/jquery-3.6.1.min.js", "./scripts/common.js", "./scripts/gather.js"]
         },
         {
             "matches": ["https://web.simple-mmo.com/inventory/items*"],
-            "js": ["jquery-3.6.1.min.js", "common.js", "inventory.js"]
+            "js": ["./scripts/jquery-3.6.1.min.js", "./scripts/common.js", "./scripts/inventory.js"]
         },
         {
             "matches": ["https://web.simple-mmo.com/user/character"],
-            "js": ["jquery-3.6.1.min.js", "common.js", "character_data.js"]
+            "js": ["./scripts/jquery-3.6.1.min.js", "./scripts/common.js", "./scripts/character_data.js"]
         }
     ]
 }
